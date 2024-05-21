@@ -50,7 +50,7 @@ jobs:
         run: |
           cd ./Main
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker build -t ${{ secrets.DOCKER_REPOSITORY }}/${{ secrets.MAIN_DOCKER_IMAGE }} .
+          docker build -t ${{ secrets.DOCKER_REPOSITORY }}/${{ secrets.DOCKER_IMAGE }} .
           docker push ${{ secrets.DOCKER_REPOSITORY }}/${{ secrets.DOCKER_IMAGE }}
 
       - name: 🍀 deploy.sh 파일을 EC2 development server로 전달
