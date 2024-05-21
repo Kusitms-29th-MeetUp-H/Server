@@ -1,4 +1,4 @@
-name: Main Service CICD
+name: Main Service CICD입니다
 
 on:
   push:
